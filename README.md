@@ -15,3 +15,7 @@ This repository contains implementations and examples of various algorithms for 
 - **Robotics Navigation**: Assist robots in localization and mapping (SLAM) in unknown environments.
 - **Medical Imaging**: Register CT, MRI, and other medical scans for better diagnosis and monitoring.
 - **Geospatial Analysis**: Create accurate terrain models and monitor environmental changes.
+
+## Dataset
+
+- The Stanford 3D Scanning Repository http://graphics.stanford.edu/data/3Dscanrep/
