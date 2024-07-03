@@ -23,3 +23,23 @@ def apply_transformation(pcd, position, quaternion):
     transformation[:3, :3] = rotation
     pcd.transform(transformation)
     return pcd
+
+
+def icpRegistration(source, target, threshold = 1e-5, iteration = 2000):
+    """
+    apply ICP registration
+
+
+    Parameters:
+    source (base points)
+    target (points need to be moved)
+
+    Returns:
+    reg_p2p
+    """
+    trans_init = np.eye(4)
+    reg_p2p = o3d.pipelines.registration.registration_icp(
+    source, target, threshold, trans_init,
+    o3d.pipelines.registration.TransformationEstimationPointToPoint(),
+    o3d.pipelines.registration.ICPConvergenceCriteria(max_iteration=iteration))
+    return reg_p2p
