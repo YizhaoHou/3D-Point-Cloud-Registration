@@ -1,17 +1,12 @@
 import open3d as o3d
 import numpy as np
 import os
+from utilities import *
 os.chdir('bunny/bunny/data')
 
 
 
-def apply_transformation(pcd, position, quaternion):
-    transformation = np.eye(4)
-    transformation[:3, 3] = position
-    rotation = o3d.geometry.get_rotation_matrix_from_quaternion(quaternion)
-    transformation[:3, :3] = rotation
-    pcd.transform(transformation)
-    return pcd
+
 
 if __name__ == "__main__":
     positions = [
