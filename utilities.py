@@ -72,6 +72,17 @@ def preprocess_point_cloud(pcd, voxel_size):
     return pcd_down, pcd_fpfh
 
 
+def execute_global_registration(source_down, target_down, source_fpfh, target_fpfh, voxel_size):
+    distance_threshold = voxel_size * 1.5
+    result = o3d.pipelines.registration.registration_ransac_based_on_feature_matching(
+        source_down, target_down, source_fpfh, target_fpfh, True, distance_threshold,
+        o3d.pipelines.registration.TransformationEstimationPointToPoint(False), 3,
+        [o3d.pipelines.registration.CorrespondenceCheckerBasedOnEdgeLength(0.9),
+         o3d.pipelines.registration.CorrespondenceCheckerBasedOnDistance(distance_threshold)
+         ], o3d.pipelines.registration.RANSACConvergenceCriteria(100000, 0.999))
+    return result
+
+
 
 
 
