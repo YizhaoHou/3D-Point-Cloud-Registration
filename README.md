@@ -22,17 +22,17 @@ This repository contains implementations and examples of various algorithms for 
 
 ## Result
 <figure align="center">
-  <img src="figures/before_registration.png" alt="before_registration">
+  <img src="figures/before_registration.png" alt="before_registration" width="400" height="300">
   <figcaption align="center">Figure1: before_registration</figcaption>
 </figure>
 
 <figure align="center">
-  <img src="figures/after_registration.png" alt="after_registration">
+  <img src="figures/after_registration.png" alt="after_registration" width="400" height="300">
   <figcaption align="center">Figure2: after_registration</figcaption>
 </figure>
 
 <figure align="center">
-  <img src="figures/after_down_sample.png" alt="after_down_sample">
+  <img src="figures/after_down_sample.png" alt="after_down_sample" width="400" height="300">
   <figcaption align="center">Figure3: after_down_sample</figcaption>
 </figure>
 
