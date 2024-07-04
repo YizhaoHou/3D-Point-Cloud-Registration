@@ -19,3 +19,6 @@ This repository contains implementations and examples of various algorithms for 
 ## Dataset
 
 - The Stanford 3D Scanning Repository http://graphics.stanford.edu/data/3Dscanrep/
+
+## Result
+![before_registration](figures/before_registration.png)
