@@ -47,7 +47,7 @@ if __name__ == "__main__":
         trans = reg.transformation
         pcd.transform(trans)
         base_cloud = base_cloud + pcd
-    # base_cloud = base_cloud.voxel_down_sample(0.007)
+    base_cloud = base_cloud.voxel_down_sample(0.007)
 
    
      

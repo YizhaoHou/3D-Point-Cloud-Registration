@@ -83,6 +83,13 @@ def execute_global_registration(source_down, target_down, source_fpfh, target_fp
     return result
 
 
+def remove_outliers_radius(pcd, radius=0.05, min_neighbors=15):
+    cl, ind = pcd.remove_radius_outlier(nb_points=min_neighbors, radius=radius)
+    inlier_cloud = pcd.select_by_index(ind)
+    outlier_cloud = pcd.select_by_index(ind, invert=True)
+    return inlier_cloud, outlier_cloud
+
+
 
 
 
