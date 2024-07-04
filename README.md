@@ -22,8 +22,8 @@ This repository contains implementations and examples of various algorithms for 
 
 ## Result
 ![before_registration](figures/before_registration.png)
-<p align="center">Figure1: before_registration </p>
+
 ![after_registration](figures/after_registration.png)
-<p align="center">Figure2: after_registration </p>
+
 ![after_down_sample](figures/after_down_sample.png)
-<p align="center">Figure3: after_down_sample </p>
+
