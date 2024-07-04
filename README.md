@@ -21,6 +21,10 @@ This repository contains implementations and examples of various algorithms for 
 - The Stanford 3D Scanning Repository http://graphics.stanford.edu/data/3Dscanrep/
 
 ## Result
+<figure align="center">
+  <img src="figures/before_registration.png" alt="before_registration">
+  <figcaption>Figure1: before_registration</figcaption>
+</figure>
 ![before_registration](figures/before_registration.png)
 
 ![after_registration](figures/after_registration.png)
