@@ -112,6 +112,14 @@ def remove_outliers_radius(pcd, radius=0.05, min_neighbors=15):
     outlier_cloud = pcd.select_by_index(ind, invert=True)
     return inlier_cloud, outlier_cloud
 
+def removed_plane(pcd):
+    plane_model, inliers = pcd.segment_plane(distance_threshold=10,
+                                         ransac_n=3,
+                                         num_iterations=1000)
+    outlier_cloud = pcd.select_by_index(inliers, invert=True)
+    outlier_cloud = pcd.select_by_index(inliers, invert=True)
+    return outlier_cloud
+
 
 
 
