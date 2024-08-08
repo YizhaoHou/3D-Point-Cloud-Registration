@@ -32,6 +32,7 @@ if __name__ == "__main__":
         apply_transformation(pcd, position, quaternion)
         point_clouds.append(pcd)
     o3d.visualization.draw_geometries(point_clouds)
+    #显示处理前的点云
     voxel_size = 0.005
     base_cloud = point_clouds[0]
     for pcd in point_clouds[1:]:
@@ -42,8 +43,8 @@ if __name__ == "__main__":
         result = execute_global_registration(source_down, target_down, source_fpfh, target_fpfh, voxel_size)
         trans = result.transformation
         pcd.transform(trans)
+        source_down.transform(trans)
         reg = icpRegistration(source_down, target_down, threshold= 0.00005, iteration=5000)
-        print(reg.fitness)
         trans = reg.transformation
         pcd.transform(trans)
         base_cloud = base_cloud + pcd
